@@ -1,1 +1,0 @@
-# Capacitacion-Bigquey
