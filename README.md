@@ -2,9 +2,9 @@
 
 <img width="705" src="https://user-images.githubusercontent.com/2066453/218166406-b1ae0410-411b-4b93-8c25-320485813504.png">
 
-Abrir el servicio de Cloud Shell.
+Abrir el servicio de bigquey.
 
-![Captura de Pantalla 2023-02-23 a la(s) 09 41 21](https://user-images.githubusercontent.com/2066453/220939054-30534387-8a27-4102-891e-e1f3cf8b0da0.png)
+![Captura de Pantalla 2023-02-23 a la(s) 09 41 21](images/1.png)
 
 Clic en el botón CONTINUAR.
 
