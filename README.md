@@ -46,10 +46,9 @@ Ejemplo 1 : VENTA_FAPE promedio agrupado por ENFERMEDAD
 		GROUP BY 1
 
 Ejericio 1:
-
-	Paso1: Calcular el promedio de MARGEN_FAPE, cantidad distinta de clientes, mínimo y maximo de TRAX_FAPE agrupado por segmento de interes
+Paso1 Calcular el promedio de MARGEN_FAPE, cantidad distinta de clientes, mínimo y maximo de TRAX_FAPE agrupado por segmento de interes
 	
-	Paso2: Filtrar los segmentos de interes con promedio de MARGEN_FAPE mayor a 50
+Paso2 Filtrar los segmentos de interes con promedio de MARGEN_FAPE mayor a 50.
 	
 Ejemplo 2 : Excluir  la columna DPTO_MF y agregar un factor de ajuste de 1 sol al margen_fape
 
