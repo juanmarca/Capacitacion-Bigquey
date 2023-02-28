@@ -1,6 +1,7 @@
 # Taller Bigquery
 
 ![Captura de Pantalla 2023-02-23 a la(s) 09 41 21](images/0.png)
+
 Abrir el servicio de bigquey.
 
 ![Captura de Pantalla 2023-02-23 a la(s) 09 41 21](images/1.png)
