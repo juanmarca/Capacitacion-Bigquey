@@ -42,6 +42,24 @@ Desglosamos "Advanced options" y definimos el tipo de delimitador del archivo. P
 
 Ejercicio: Obtener el número de contacto para Inkafarma y Mifarma de los clientes muy alto valor activos en Fape
 
+Conceptos:
+
+Left Join: Devuelve todas las filas de la tabla de la izquierda y las filas coincidentes
+
+![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](images/9.png)
+
+CASE: La expresión CASE recorre las condiciones y devuelve un valor cuando se cumple la primera condición. Así, cuando una condición es verdadera, deja de leer y devuelve el resultado. Si no se cumple ninguna condición, devuelve el valor de la cláusula ELSE.
+
+ROW_NUMBER() : Asigna un número secuencial único a cada fila en el conjunto de resultados de una consulta
+
+PARTITION BY
+
+Divide el conjunto de resultados producido por la cláusula FROM en particiones a las que se aplica la función ROW_NUMBER
+
+La ORDER BY
+
+cláusula determina la secuencia en la que a las filas se les asigna su único ROW_NUMBERdentro de una partición específica.
+ 
 Ejecutar el siguiente comando en el consulta de bigquery.
 
 	
@@ -91,10 +109,10 @@ Ejecutar el siguiente comando en el consulta de bigquery.
 		    ) WHERE PUESTO = 1
 		)
 
-SELECT DISTINCT ID_CLIENTE,A.NRO_CELULAR_E AS CELULAR_INKAFARMA, B.NRO_CELULAR_E AS CELULAR_MIFARMA FROM pe-fps-plataformadedatos-dev.DS_ANALYTICS.MAPEO_CLIENTES_CI
-LEFT JOIN CELULAR_INKAFARMA AS A ON ID_CLIENTE=A.NRODOCUMENTO
-LEFT JOIN CELULAR_MIFARMA AS B ON ID_CLIENTE=B.NRODOCUMENTO
-WHERE ACTIVO_FAPE="Si" AND SEG_VALOR IN ("Medio valor","Bajo valor")
+		SELECT DISTINCT ID_CLIENTE,A.NRO_CELULAR_E AS CELULAR_INKAFARMA, B.NRO_CELULAR_E AS CELULAR_MIFARMA FROM pe-fps-plataformadedatos-dev.DS_ANALYTICS.MAPEO_CLIENTES_CI
+		LEFT JOIN CELULAR_INKAFARMA AS A ON ID_CLIENTE=A.NRODOCUMENTO
+		LEFT JOIN CELULAR_MIFARMA AS B ON ID_CLIENTE=B.NRODOCUMENTO
+		WHERE ACTIVO_FAPE="Si" AND SEG_VALOR IN ("Medio valor","Bajo valor")
 	
 Se nos pedirá nuestro usuario y nuestro PAT (Personal Access Token).
 
