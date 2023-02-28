@@ -1,7 +1,6 @@
 # Taller Bigquery
 
-<img width="705" src="https://user-images.githubusercontent.com/2066453/218166406-b1ae0410-411b-4b93-8c25-320485813504.png">
-
+![Captura de Pantalla 2023-02-23 a la(s) 09 41 21](images/0.png)
 Abrir el servicio de bigquey.
 
 ![Captura de Pantalla 2023-02-23 a la(s) 09 41 21](images/1.png)
@@ -10,9 +9,17 @@ Aparecerá la siguiente pantalla, Verificar que estemos en el proyecto prd-farma
 
 <img width="700" src="images/2.png">
 
-Clonaremos el repositorio de Github en Cloud Shell.
+Clic en COMPOSE A NEW QUERY.
 
-![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](https://user-images.githubusercontent.com/2066453/220939599-db910af2-e87e-4e21-bbbf-49f3e60fdb28.png)
+![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](images/3.png)
+
+## Carga de datos
+
+Desglosamos el proyecto pe-fps-plataformadedatos-dev y seleccionamos el proyecto donde almacenaremos la tabla:
+
+![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](images/4.png)
+
+
 
 Ejecutar el siguiente comando en el terminal de linux.
 
