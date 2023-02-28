@@ -1,0 +1,71 @@
+Flujo_Name;monto_min;monto_max;plazo;CORPORACION
+Aniversario_5;;58;7;INKAFARMA
+Aniversario_10;58;88;7;INKAFARMA
+Aniversario_15;89;98;7;INKAFARMA
+Aniversario_20;99;;7;INKAFARMA
+Carrito App;;99;7;INKAFARMA
+Carrito App benef;99;173;7;INKAFARMA
+Carrito App benef 2;174;;7;INKAFARMA
+Carrito_abandonado;;179;7;INKAFARMA
+Carrito_abandonado Benef;179;;7;INKAFARMA
+Cliente_Fuga;79;;7;INKAFARMA
+Cross_Sell;;;3;INKAFARMA
+Cumple_AV-MAV;99;;7;INKAFARMA
+Cumple_Cronicos;89;;7;INKAFARMA
+Cumple_General;59;;7;INKAFARMA
+Cumple_Mama;59;;7;INKAFARMA
+Cumplea?os_derma;90;;7;INKAFARMA
+Cumplea?os_wellness;90;;7;INKAFARMA
+Cumpleaños_derma;90;;7;INKAFARMA
+Cumpleaños_wellness;90;;7;INKAFARMA
+Flujo_AV-MAV;;;7;INKAFARMA
+Flujo_Bienvenida;64;;3;INKAFARMA
+Flujo_Bienvenida_App;64;;3;INKAFARMA
+NuevoCyber_cpersonal;;;10;INKAFARMA
+NuevoCyber_dermo;;;10;INKAFARMA
+NuevoCyber_infantil;;;10;INKAFARMA
+NuevoCyber_wellness;;;10;INKAFARMA
+Primera_Compra_dia10;59;;10;INKAFARMA
+Primera_Compra_dia3;59;;3;INKAFARMA
+Primera_Compra_dia7;35;;7;INKAFARMA
+Recurrente_Sin_Compra;;;7;INKAFARMA
+Segunda_Compra;84;;7;INKAFARMA
+Up Selling;;;3;INKAFARMA
+Up Selling MMPP;;;3;INKAFARMA
+Up Selling Sesderma;;;3;INKAFARMA
+Up Selling TotalDent;;;3;INKAFARMA
+Zombie_no;;;3;INKAFARMA
+Zombie_si;;;3;INKAFARMA
+Aniversario_5;;78;7;MIFARMA
+Aniversario_10;79;98;7;MIFARMA
+Aniversario_15;99;118;7;MIFARMA
+Aniversario_20;119;;7;MIFARMA
+Carrito App;;98;7;MIFARMA
+Carrito App benef;99;198;7;MIFARMA
+Carrito App benef 2;199;;7;MIFARMA
+Carrito_abandonado;;198;7;MIFARMA
+Carrito_abandonado Benef;199;;7;MIFARMA
+Cliente_Fuga;79;;7;MIFARMA
+Cross_Sell;;;3;MIFARMA
+Cumple_AV-MAV;99;;7;MIFARMA
+Cumple_Cronicos;59;;7;MIFARMA
+Cumple_General;89;;7;MIFARMA
+Cumplea?os_derma;90;;7;MIFARMA
+Cumplea?os_wellness;90;;7;MIFARMA
+Cumpleaños_derma;90;;7;MIFARMA
+Cumpleaños_wellness;90;;7;MIFARMA
+Flujo_Bienvenida;79;;3;MIFARMA
+Flujo_Bienvenida_App;99;;3;MIFARMA
+Primera_Compra_dia10;79;;10;MIFARMA
+Primera_Compra_dia3;89;;3;MIFARMA
+Primera_Compra_dia7;;;7;MIFARMA
+Recurrente_Sin_Compra;;;7;MIFARMA
+Segunda_Compra;99;;7;MIFARMA
+Up Selling Avene;;;3;MIFARMA
+Up Selling Generico;;;3;MIFARMA
+Up Selling Ninet;;;3;MIFARMA
+Up Selling Sunvit;;;3;MIFARMA
+Zombie_no;;;3;MIFARMA
+Zombie_si;;;3;MIFARMA
+One Shot Ecommerce;;;7;INKAFARMA
+One Shot Ecommerce;;;7;MIFARMA
