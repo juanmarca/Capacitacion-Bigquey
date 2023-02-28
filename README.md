@@ -24,19 +24,19 @@ Es SOURCE, cambiamos el valor de "create table from" a "upload", clic en browse 
 
 En proyect ponemos pe-fps-plataformadedatos-dev, configuramos el dataset y en "table" ponemos el nombre que le queremos asignar a nuestra tabla.
 
-![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](images/5.png)
+![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](images/5.PNG)
 
 Schema, usamos solo la opción "auto detect" si el tipo de datos de las columnas estan bien definidas, como en el archivo se tiene el campo DNI bigquery podria detectarlo como integer y quitar el 0 delante, por eso definimos el tipo de columna manualmente.
 
-![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](images/6.png)
+![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](images/6.PNG)
 
 Desglosamos "Advanced options" y definimos el tipo de delimitador del archivo. Posteriormente le damos en "CREATE TABLE"
 
-![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](images/7.png)
+![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](images/7.PNG)
 
 ¡Ya creamos nuestra primera tabla!
 
-![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](images/8.png)
+![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](images/8.PNG)
 
 ## Querys
 
