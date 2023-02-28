@@ -40,7 +40,7 @@ Desglosamos "Advanced options" y definimos el tipo de delimitador del archivo. P
 
 ## Querys
 
-Ejemplo 1 : Cantidad de clientes y VENTA_FAPE promedio agrupado por ENFERMEDAD
+Ejemplo 1 : VENTA_FAPE promedio agrupado por ENFERMEDAD
 
 		select ENFERMEDAD,AVG(VENTA_FAPE)  AS VENTA_FAPE FROM pe-fps-plataformadedatos-dev.DS_ANALYTICS.MAPEO_CLIENTES_CI
 		GROUP BY 1
@@ -61,7 +61,7 @@ Ejemplo 2 : Excluir  la columna DPTO_MF y agregar un factor de ajuste de 1 sol a
 Ejericio 2: Excluir las columnas DPTO_IF, PROV_IF, DIST_IF, DPTO_MF, PROV_MF, DIST_MF y agregar un factor de descuento a VENTA_FAPE de 5 soles.
 
 
-Ejemplo 3: Obtener el número de contacto para Inkafarma y Mifarma de los clientes muy alto valor activos en Fape
+Ejemplo 3: Obtener el número de contacto para Inkafarma y Mifarma de los clientes muy alto valor y Bajo Valor activos en Fape
 
 Conceptos previos:
 
@@ -135,7 +135,6 @@ Ejecutar el siguiente comando en el consulta de bigquery.
 		LEFT JOIN CELULAR_MIFARMA AS B ON ID_CLIENTE=B.NRODOCUMENTO
 		WHERE ACTIVO_FAPE="Si" AND SEG_VALOR IN ("Medio valor","Bajo valor")
 	
-Se nos pedirá nuestro usuario y nuestro PAT (Personal Access Token).
 
 Ejercicio 3 : Traer el email para Inkafarma y Mifarma
 
