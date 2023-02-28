@@ -8,7 +8,7 @@ Abrir el servicio de bigquey.
 
 Aparecerá la siguiente pantalla, Verificar que estemos en el proyecto prd-farma-peru-cost-control.
 
-<img width="505" src="images/2.png">
+<img width="400" src="images/2.png">
 
 Clonaremos el repositorio de Github en Cloud Shell.
 
