@@ -20,15 +20,87 @@ Desglosamos el proyecto pe-fps-plataformadedatos-dev y seleccionamos el proyecto
 
 ![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](images/4.png)
 
+Es SOURCE, cambiamos el valor de "create table from" a "upload", clic en browse y buscamos el archivo que queremos cargar.
 
+En proyect ponemos pe-fps-plataformadedatos-dev, configuramos el dataset y en "table" ponemos el nombre que le queremos asignar a nuestra tabla.
 
-Ejecutar el siguiente comando en el terminal de linux.
+![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](images/5.png)
 
-	git clone https://github.com/luisgradossalinas/taller-gcp-dataplatform-04
+Schema, usamos solo la opción "auto detect" si el tipo de datos de las columnas estan bien definidas, como en el archivo se tiene el campo DNI bigquery podria detectarlo como integer y quitar el 0 delante, por eso definimos el tipo de columna manualmente.
+
+![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](images/6.png)
+
+Desglosamos "Advanced options" y definimos el tipo de delimitador del archivo. Posteriormente le damos en "CREATE TABLE"
+
+![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](images/7.png)
+
+¡Ya creamos nuestra primera tabla!
+
+![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](images/8.png)
+
+## Querys
+
+Ejercicio: Obtener el número de contacto para Inkafarma y Mifarma de los clientes muy alto valor activos en Fape
+
+Ejecutar el siguiente comando en el consulta de bigquery.
+
+	
+		WITH CELULAR_INKAFARMA AS (
+		SELECT NRODOCUMENTO, NRO_CELULAR_E
+		    FROM (
+		      SELECT NRODOCUMENTO, NRO_CELULAR_E, ROW_NUMBER() OVER(PARTITION BY NRO_CELULAR_E ORDER BY PUNTUACION DESC, FECHA_REGISTRO DESC) PUESTO
+		      FROM (
+			SELECT  NRODOCUMENTO, NRO_CELULAR_E, PUNTUACION,FECHA_REGISTRO,
+			  ROW_NUMBER() OVER(PARTITION BY NRODOCUMENTO ORDER BY PUNTUACION DESC, FECHA_REGISTRO DESC) PUESTO
+			FROM (
+			  SELECT DISTINCT NRODOCUMENTO, NRO_CELULAR_E,
+			    CASE WHEN COD_FUENTE IN ('F06') THEN 6 --'1. Agora Club'
+			      WHEN COD_FUENTE IN ('F03.1','F03.2') THEN 5 --'2. ECOMMERCE'
+			      WHEN COD_FUENTE IN ('F02.1','F02.2') THEN 4 --'3. LANDING'
+			      WHEN COD_FUENTE IN ('F05') THEN 3 --'4. GDH'
+			      WHEN COD_FUENTE IN ('F04') THEN 2--'5. FINANCIERA OH'
+			  ELSE 1 --'6. MESON'
+			  END PUNTUACION, FECHA_REGISTRO
+			  FROM `pe-farm-peruanas-gcp.DS_ANALYTICS.CONTACTABILIDAD_CELULAR5_INKAFARMA`
+				)
+			  ) WHERE PUESTO = 1
+		    ) WHERE PUESTO = 1
+		)
+
+		,
+
+		CELULAR_MIFARMA AS (
+		    SELECT NRODOCUMENTO, NRO_CELULAR_E
+		    FROM (
+		      SELECT NRODOCUMENTO, NRO_CELULAR_E, ROW_NUMBER() OVER(PARTITION BY NRO_CELULAR_E ORDER BY PUNTUACION DESC, FECHA_REGISTRO DESC) PUESTO
+		      FROM (
+			SELECT  NRODOCUMENTO, NRO_CELULAR_E, PUNTUACION,FECHA_REGISTRO,
+			  ROW_NUMBER() OVER(PARTITION BY NRODOCUMENTO ORDER BY PUNTUACION DESC, FECHA_REGISTRO DESC) PUESTO
+			FROM (
+			  SELECT DISTINCT NRODOCUMENTO, NRO_CELULAR_E,
+			    CASE WHEN COD_FUENTE IN ('F06') THEN 6 --'1. Agora Club'
+			      WHEN COD_FUENTE IN ('F03.1','F03.2') THEN 5 --'2. ECOMMERCE'
+			      WHEN COD_FUENTE IN ('F02.1','F02.2') THEN 4 --'3. LANDING'
+			      WHEN COD_FUENTE IN ('F05') THEN 3 --'4. GDH'
+			      WHEN COD_FUENTE IN ('F04') THEN 2--'5. FINANCIERA OH'
+			  ELSE 1 --'6. MESON'
+			  END PUNTUACION, FECHA_REGISTRO
+			  FROM `pe-farm-peruanas-gcp.DS_ANALYTICS.CONTACTABILIDAD_CELULAR5_MIFARMA`
+				)
+			  ) WHERE PUESTO = 1
+		    ) WHERE PUESTO = 1
+		)
+
+SELECT DISTINCT ID_CLIENTE,A.NRO_CELULAR_E AS CELULAR_INKAFARMA, B.NRO_CELULAR_E AS CELULAR_MIFARMA FROM pe-fps-plataformadedatos-dev.DS_ANALYTICS.MAPEO_CLIENTES_CI
+LEFT JOIN CELULAR_INKAFARMA AS A ON ID_CLIENTE=A.NRODOCUMENTO
+LEFT JOIN CELULAR_MIFARMA AS B ON ID_CLIENTE=B.NRODOCUMENTO
+WHERE ACTIVO_FAPE="Si" AND SEG_VALOR IN ("Medio valor","Bajo valor")
 	
 Se nos pedirá nuestro usuario y nuestro PAT (Personal Access Token).
 
 ![Captura de Pantalla 2023-02-23 a la(s) 09 51 50](https://user-images.githubusercontent.com/2066453/220941768-37ac13a9-f947-4950-94d6-e12bead5bab3.png)
+
+
 
 Veremos que se ha creado una carpeta en Cloud Shell, creamos una variable para usarla en el terminal de Cloud Shell.
 
