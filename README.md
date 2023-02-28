@@ -1,4 +1,4 @@
-# Plataforma de datos en Google Cloud
+# Taller Bigquery
 
 <img width="705" src="https://user-images.githubusercontent.com/2066453/218166406-b1ae0410-411b-4b93-8c25-320485813504.png">
 
