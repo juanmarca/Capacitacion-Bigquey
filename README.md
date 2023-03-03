@@ -143,3 +143,7 @@ Inkafarma: pe-farm-peruanas-gcp.DS_ANALYTICS.CONTACTABILIDAD_EMAIL6_INKAFARMA
 
 Mifarma: pe-farm-peruanas-gcp.DS_ANALYTICS.CONTACTABILIDAD_EMAIL6_MIFARMA
 
+## Joining Tables
+
+![Captura de Pantalla 2023-02-23 a la(s) 09 43 27](images/10.PNG)
+
